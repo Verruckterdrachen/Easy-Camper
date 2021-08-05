@@ -93,7 +93,10 @@ body {
   &__priority {}
   &__managers {
     @include adaptiv-value("padding-top", 240, 80, 1);
-    @include adaptiv-value("padding-bottom", 200, 70, 1);
+    @include adaptiv-value("padding-bottom", 240, 70, 1);
+  }
+  &__advantages {
+    @include adaptiv-value("padding-bottom", 240, 70, 1);
   }
 }
 //===================================================================================================================================
@@ -335,5 +338,36 @@ body {
   }
 }
 //============================================================================
-
+.advantages {
+  &__title {
+    @include adaptiv-value("margin-bottom", 100, 36, 1);
+  }
+  &__items {
+    @media (min-width:$md3+px){
+      display: flex;
+      margin: 0px -20px; 
+    }
+  }
+}
+.item-advantages {
+  display: flex;
+  flex-direction: column;
+  *:last-child {
+    margin-bottom: 0;
+  }
+  @media (min-width:$md3+px){
+    flex: 0 1 33.333%;
+    padding: 0px 20px; 
+  }
+  @media (max-width:$md3+px){
+    &:not(:last-child) {margin: 0px 0px 50px 0px;} 
+  }
+  &__image {
+    @include adaptiv-value("margin-bottom", 64, 20, 1);
+  }
+  &__title {
+    flex: 1 1 auto;
+    margin: 0px 0px 24px/22px * 1em 0px;
+  }
+}
 //</ОСНОВНОЙ БЛОК>====================================================================================================
