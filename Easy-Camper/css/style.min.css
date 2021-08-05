@@ -152,10 +152,29 @@ body._lock {
 
 .button {
   display: inline-flex;
-  padding: 0px 0px;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  background-color: #F78065;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 122.2222222222%;
+  min-height: 65px;
+  transition: background-color 0.3s ease 0s;
 }
-.button._fw {
-  width: 100%;
+@media (max-width: 1266px) {
+  .button {
+    font-size: calc(16px + 2 * ((100vw - 320px) / 946));
+  }
+}
+.button::before {
+  font-size: 24px;
+  margin: 0px 8px 0px 0px;
+}
+@media (any-hover: hover) {
+  .button:hover {
+    background-color: #e0735b;
+  }
 }
 
 .select {
@@ -808,8 +827,14 @@ body.ie ._ibg img {
   align-items: center;
   min-height: 53px;
   background-color: #fff;
-  padding: 0px 14px;
+  padding: 0px 10.5px;
   border-radius: 26px;
+}
+@media (max-width: 767.98px) {
+  .header__profile {
+    min-height: 42px;
+    padding: 0px 5px;
+  }
 }
 .header__user {
   display: flex;
@@ -868,4 +893,76 @@ body.ie ._ibg img {
 */
 .page {
   flex: 1 1 auto;
+}
+.hello {
+  display: flex;
+  background: url("../img/hello-bg.jpg") center/cover no-repeat;
+  min-height: 650px;
+}
+@media (max-width: 1266px) {
+  .hello {
+    min-height: calc(500px + 150 * ((100vw - 320px) / 946));
+  }
+}
+.hello__container {
+  flex: 1 1 100%;
+  display: flex;
+  align-items: flex-end;
+}
+.hello__body {
+  flex: 0 0 741px;
+  background-color: #fff;
+  padding: 96px 156px 75px 64px;
+  box-shadow: 0px 4px 100px 0px #0000001A;
+  margin: 113px 0px -22% -40px;
+}
+@media (max-width: 1266px) {
+  .hello__body {
+    flex: 1 1 auto;
+    margin: 70px 0px -22% 0px;
+    padding: 64px;
+  }
+}
+@media (max-width: 1266px) and (max-width: 1266px) {
+  .hello__body {
+    padding: calc(20px + 44 * ((100vw - 320px) / 946));
+  }
+}
+.hello__body *:last-child {
+  margin-bottom: 0;
+}
+.hello__title {
+  font-family: "Merriweather";
+  font-size: 39px;
+  line-height: 125.641025641%;
+  margin: 0px 0px 0.7692307692em 0px;
+}
+@media (max-width: 1266px) {
+  .hello__title {
+    font-size: calc(25px + 14 * ((100vw - 320px) / 946));
+  }
+}
+.hello__title span {
+  color: #F78065;
+}
+.hello__text {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 120%;
+  margin: 0px 0px 1.5em 0px;
+  opacity: 0.6;
+}
+@media (max-width: 1266px) {
+  .hello__text {
+    font-size: calc(15px + 5 * ((100vw - 320px) / 946));
+  }
+}
+.hello__button {
+  margin: 0px 0px 20px 0px;
+  padding: 0px 77px;
+}
+@media (max-width: 479.98px) {
+  .hello__button {
+    width: 100%;
+  }
 }

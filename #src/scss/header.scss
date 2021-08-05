@@ -37,8 +37,12 @@
     align-items: center;
     min-height: 53px;
     background-color: #fff;
-    padding: 0px 14px;
+    padding: 0px 10.5px;
     border-radius: 26px;
+    @media (max-width:$md3+px){
+      min-height: 42px; 
+      padding: 0px 5px;
+    }
   }
   &__user {
     display: flex;

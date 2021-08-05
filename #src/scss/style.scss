@@ -85,7 +85,57 @@ body {
 //<ОСНОВНОЙ БЛОК>====================================================================================================
 .page {
 	flex: 1 1 auto;
+  &__hello {}
 }
 //===================================================================================================================================
+.hello {
+  display: flex;
+  background: url('../img/hello-bg.jpg') center / cover no-repeat;
+  @include adaptiv-value("min-height", 650, 500, 1);
+  &__container {
+    flex: 1 1 100%;
+    display: flex;
+    align-items: flex-end;
+  }
+  &__body {
+    flex: 0 0 741px;
+    background-color: #fff;
+    padding: 96px 156px 75px 64px;
+    box-shadow: 0px 4px 100px 0px #0000001A;
+    margin: 113px 0px -22% -40px;
+    @media (max-width: 1266px){
+      flex: 1 1 auto;
+      margin: 70px 0px -22% 0px;
+      @include adaptiv-value("padding", 64, 20, 1);
+    }
+    *:last-child {
+      margin-bottom: 0;
+    }
+  }
+  &__title {
+    font-family: "Merriweather";
+    @include adaptiv-value("font-size", 39, 25, 1);
+    line-height: 49 / 39 * 100%;
+    margin: 0px 0px 30px/39px * 1em 0px;
+    span {
+      color: $primaryColor;
+    }
+  }
+  &__text {
+    font-weight: 500;
+    @include adaptiv-value("font-size", 20, 15, 1);
+    line-height: 24 / 20 * 100%;
+    margin: 0px 0px 30px/20px * 1em 0px;
+    opacity: 0.6;
+  }
+  &__button {
+    margin: 0px 0px 20px 0px;
+    padding: 0px 77px;
+    @media (max-width:$md4+px){
+      width: 100%;
+    }
+  }
+}
+//============================================================================
 
 //</ОСНОВНОЙ БЛОК>====================================================================================================
