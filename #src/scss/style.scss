@@ -88,8 +88,9 @@ body {
   &__hello {}
   &__services {
     @include adaptiv-value("padding-top", 400, 160, 1);
-    @include adaptiv-value("padding-bottom", 240, 80, 1);
+    @include adaptiv-value("padding-bottom", 240, 70, 1);
   }
+  &__priority {}
 }
 //===================================================================================================================================
 .hello {
@@ -143,15 +144,15 @@ body {
 //============================================================================
 .services {
   &__body {
-    display: flex;
-    margin: 0px -20px;
-    @media (max-width: 900px){
-      flex-direction: column;
-      margin: 0;
-    } 
+    @media (min-width: 900px){
+      display: flex;
+      margin: 0px -20px;  
+    }
   }
   &__item {
-    flex: 0 1 33.333%;  
+    @media (min-width: 900px){
+      flex: 0 1 33.333%;  
+    }
   }
 }
 .item-services {
@@ -182,6 +183,46 @@ body {
     line-height: 22 / 18 * 100%;
     margin: 0px 0px 20px/24px * 1em 0px;
     color: $primaryColor;
+  }
+}
+//============================================================================
+.priority {
+  &__title {
+    @include adaptiv-value("margin-bottom", 100, 40, 1);
+  }
+  &__items {
+    display: grid;
+    gap: 45px;
+    grid-template-columns: repeat(auto-fit, minmax(275px, 1fr));
+  }
+}
+.item-priority {
+  display: flex;
+  flex-direction: column;
+  *:last-child {
+    margin-bottom: 0;
+  }
+  &__image {
+    @include adaptiv-value("margin-bottom", 60, 20, 1);
+  }
+  &__title {
+    margin: 0px 0px 30px/22px * 1em 0px;
+  }
+  &__text {
+    margin: 0px 0px 15px/14px * 1em 0px;
+    flex: 1 1 auto;
+  }
+  &__link {
+    font-weight: 700;
+    color: $primaryColor;
+    font-size: 18px;
+    line-height: 22 / 18 * 100%;
+    margin: 0px 0px 20px 0px;
+    @media (any-hover: hover){
+      &:hover{
+        text-decoration: underline;
+      }
+    }
   }
 }
 //============================================================================

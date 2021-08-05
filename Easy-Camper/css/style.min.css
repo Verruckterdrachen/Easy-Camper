@@ -500,6 +500,35 @@ textarea.input {
   text-align: center;
 }
 
+.title {
+  font-family: "Merriweather";
+  font-size: 36px;
+  line-height: 125%;
+}
+@media (max-width: 1266px) {
+  .title {
+    font-size: calc(24px + 12 * ((100vw - 320px) / 946));
+  }
+}
+
+.item-title {
+  font-family: "Merriweather";
+  font-size: 22px;
+  line-height: 127.2727272727%;
+}
+@media (max-width: 1266px) {
+  .item-title {
+    font-size: calc(18px + 4 * ((100vw - 320px) / 946));
+  }
+}
+
+.item-text {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 171.4285714286%;
+  opacity: 0.5;
+}
+
 .row:after {
   display: block;
   content: "";
@@ -905,10 +934,9 @@ body.ie ._ibg img {
 }
 @media (max-width: 1266px) {
   .page__services {
-    padding-bottom: calc(80px + 160 * ((100vw - 320px) / 946));
+    padding-bottom: calc(70px + 170 * ((100vw - 320px) / 946));
   }
 }
-
 .hello {
   display: flex;
   background: url("../img/hello-bg.jpg") center/cover no-repeat;
@@ -982,18 +1010,16 @@ body.ie ._ibg img {
   }
 }
 
-.services__body {
-  display: flex;
-  margin: 0px -20px;
-}
-@media (max-width: 900px) {
+@media (min-width: 900px) {
   .services__body {
-    flex-direction: column;
-    margin: 0;
+    display: flex;
+    margin: 0px -20px;
   }
 }
-.services__item {
-  flex: 0 1 33.333%;
+@media (min-width: 900px) {
+  .services__item {
+    flex: 0 1 33.333%;
+  }
 }
 
 .item-services {
@@ -1048,5 +1074,54 @@ body.ie ._ibg img {
 @media (max-width: 1266px) {
   .item-services__desc {
     font-size: calc(16px + 2 * ((100vw - 320px) / 946));
+  }
+}
+
+.priority__title {
+  margin-bottom: 100px;
+}
+@media (max-width: 1266px) {
+  .priority__title {
+    margin-bottom: calc(40px + 60 * ((100vw - 320px) / 946));
+  }
+}
+.priority__items {
+  display: grid;
+  gap: 45px;
+  grid-template-columns: repeat(auto-fit, minmax(275px, 1fr));
+}
+
+.item-priority {
+  display: flex;
+  flex-direction: column;
+}
+.item-priority *:last-child {
+  margin-bottom: 0;
+}
+.item-priority__image {
+  margin-bottom: 60px;
+}
+@media (max-width: 1266px) {
+  .item-priority__image {
+    margin-bottom: calc(20px + 40 * ((100vw - 320px) / 946));
+  }
+}
+.item-priority__title {
+  margin: 0px 0px 1.3636363636em 0px;
+}
+.item-priority__text {
+  margin: 0px 0px 1.0714285714em 0px;
+  flex: 1 1 auto;
+}
+.item-priority__link {
+  font-weight: 700;
+  color: #F78065;
+  font-size: 18px;
+  line-height: 122.2222222222%;
+  margin: 0px 0px 20px 0px;
+}
+@media (any-hover: hover) {
+  .item-priority__link:hover {
+    text-decoration: underline;
   }
 }
