@@ -791,11 +791,11 @@ body.ie ._ibg img {
 }
 
 .header._scroll .header__wrapper {
-  background-color: rgba(0, 0, 0, 0.2);
+  background-color: rgba(0, 0, 0, 0.7);
 }
 @media (any-hover: hover) {
   .header._scroll .header__wrapper:hover {
-    background-color: rgba(0, 0, 0, 0.3);
+    background-color: rgba(0, 0, 0, 0.8);
   }
 }
 .header._scroll .header__body {
@@ -894,6 +894,21 @@ body.ie ._ibg img {
 .page {
   flex: 1 1 auto;
 }
+.page__services {
+  padding-top: 400px;
+  padding-bottom: 240px;
+}
+@media (max-width: 1266px) {
+  .page__services {
+    padding-top: calc(160px + 240 * ((100vw - 320px) / 946));
+  }
+}
+@media (max-width: 1266px) {
+  .page__services {
+    padding-bottom: calc(80px + 160 * ((100vw - 320px) / 946));
+  }
+}
+
 .hello {
   display: flex;
   background: url("../img/hello-bg.jpg") center/cover no-repeat;
@@ -964,5 +979,74 @@ body.ie ._ibg img {
 @media (max-width: 479.98px) {
   .hello__button {
     width: 100%;
+  }
+}
+
+.services__body {
+  display: flex;
+  margin: 0px -20px;
+}
+@media (max-width: 900px) {
+  .services__body {
+    flex-direction: column;
+    margin: 0;
+  }
+}
+.services__item {
+  flex: 0 1 33.333%;
+}
+
+.item-services {
+  padding: 0px 20px;
+}
+@media (max-width: 900px) {
+  .item-services {
+    padding: 0;
+    text-align: center;
+  }
+  .item-services:not(:last-child) {
+    margin: 0px 0px 60px 0px;
+  }
+}
+.item-services__image {
+  margin-bottom: 84px;
+}
+@media (max-width: 1266px) {
+  .item-services__image {
+    margin-bottom: calc(20px + 64 * ((100vw - 320px) / 946));
+  }
+}
+.item-services__title {
+  font-family: "Merriweather";
+  font-size: 24px;
+  line-height: 125%;
+  margin: 0px 0px 0.8333333333em 0px;
+}
+@media (max-width: 1266px) {
+  .item-services__title {
+    font-size: calc(20px + 4 * ((100vw - 320px) / 946));
+  }
+}
+.item-services__text {
+  font-size: 18px;
+  line-height: 122.2222222222%;
+  opacity: 0.5;
+  margin: 0px 0px 0.8333333333em 0px;
+}
+@media (max-width: 1266px) {
+  .item-services__text {
+    font-size: calc(16px + 2 * ((100vw - 320px) / 946));
+  }
+}
+.item-services__desc {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 122.2222222222%;
+  margin: 0px 0px 0.8333333333em 0px;
+  color: #F78065;
+}
+@media (max-width: 1266px) {
+  .item-services__desc {
+    font-size: calc(16px + 2 * ((100vw - 320px) / 946));
   }
 }

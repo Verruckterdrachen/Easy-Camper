@@ -86,6 +86,10 @@ body {
 .page {
 	flex: 1 1 auto;
   &__hello {}
+  &__services {
+    @include adaptiv-value("padding-top", 400, 160, 1);
+    @include adaptiv-value("padding-bottom", 240, 80, 1);
+  }
 }
 //===================================================================================================================================
 .hello {
@@ -134,6 +138,50 @@ body {
     @media (max-width:$md4+px){
       width: 100%;
     }
+  }
+}
+//============================================================================
+.services {
+  &__body {
+    display: flex;
+    margin: 0px -20px;
+    @media (max-width: 900px){
+      flex-direction: column;
+      margin: 0;
+    } 
+  }
+  &__item {
+    flex: 0 1 33.333%;  
+  }
+}
+.item-services {
+  padding: 0px 20px;
+  @media (max-width: 900px){
+    &:not(:last-child) {margin: 0px 0px 60px 0px;}
+    padding: 0;
+    text-align: center;
+  }
+  &__image {
+    @include adaptiv-value("margin-bottom", 84, 20, 1);
+  }
+  &__title {
+    font-family: "Merriweather";
+    @include adaptiv-value("font-size", 24, 20, 1);
+    line-height: 30 / 24 * 100%;
+    margin: 0px 0px 20px/24px * 1em 0px;
+  }
+  &__text {
+    @include adaptiv-value("font-size", 18, 16, 1);
+    line-height: 22 / 18 * 100%;
+    opacity: 0.5;
+    margin: 0px 0px 20px/24px * 1em 0px;
+  }
+  &__desc {
+    font-weight: 700;
+    @include adaptiv-value("font-size", 18, 16, 1);
+    line-height: 22 / 18 * 100%;
+    margin: 0px 0px 20px/24px * 1em 0px;
+    color: $primaryColor;
   }
 }
 //============================================================================
